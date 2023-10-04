@@ -9,14 +9,13 @@ interface IPost {
 }
 
 export default function PostCard({ userId, id, title, body }: IPost) {
-    //RCC
-    console.log(userId)
+    //RCC   
     return (
-        <div key={id}>
+        <div key={id} className="bg-gray-950 p-10">
             <Link href={`/posts/${id}`}>
-                <h3>{id}. {title}</h3>
+                <h3 className="text-xl font-bold mb-4">{id}. {title}</h3>
             </Link>
-            <p>{body}</p>
+            <p className="text-slate-300">{body}</p>
             <button onClick={() => console.log(title)}>Click</button>
         </div>
     )
