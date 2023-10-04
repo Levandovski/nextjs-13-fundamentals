@@ -1,4 +1,5 @@
 import PostsCard from "@/components/PostCard";
+import "./Posts.css";
 
 interface IPosts {
     userId: number,
@@ -11,7 +12,7 @@ async function loadPages(): Promise<[]> {
     const res = await fetch('https://jsonplaceholder.typicode.com/posts');
     const data = await res.json();
 
-    // await new Promise((resolve) => setTimeout(resolve, 3000))
+    await new Promise((resolve) => setTimeout(resolve, 5000))
     
     return data;
 }
@@ -21,7 +22,7 @@ export default async function PostsPage() {
     console.log(posts)
     //RSC
     return (
-        <div>
+        <div className="grid">
             {posts.map((post, key) => {
                 return (
                     <PostsCard body={post.body} title={post.title} id={post.id} userId={post.userId} key={key} />

@@ -1,5 +1,6 @@
 import NavBar from "../components/Navbar"
 import { Roboto } from 'next/font/google';
+import './globals.css';
 
 export const metadata = {
   title: 'My store with nextjs - HomePage',
