@@ -1,6 +1,8 @@
 
 'use client';
+
 import Link from "next/link";
+
 interface IPost {
     userId?: number,
     id: number,
